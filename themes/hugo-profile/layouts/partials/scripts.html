@@ -85,8 +85,8 @@
 
 {{ end }}
 
-{{ if (.Site.Params.contact.formspree.enable | default false) }}
-<script src="{{ .Site.Params.staticPath }}/js/contact.js"></script>
+{{ if (.Site.Params.feedback.formspree.enable | default false) }}
+<script src="{{ .Site.Params.staticPath }}/js/feedback.js"></script>
 {{ end }}
 
 {{ if (.Site.Params.customScripts | default false) }}

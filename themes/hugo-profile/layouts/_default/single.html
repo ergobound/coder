@@ -222,12 +222,12 @@
 
 <script>
 
-  var newURL = "/projects";
+  var newURL = "{{ .Site.BaseURL }}projects";
  //  document.getElementById("link").href = newURL;
-  document.querySelector('[aria-label="education"]').href = newURL;
-  document.querySelector('[aria-label="education"]').textContent = "проекты";
+  document.querySelector('[aria-label="short"]').href = newURL;
+  document.querySelector('[aria-label="short"]').textContent = "проекты";
   document.querySelector('[aria-label="about"]').textContent = "< вернуться";
-  document.querySelector('[aria-label="contact"]').remove();
+  document.querySelector('[aria-label="feedback"]').remove();
   // document.get;
 
 </script>

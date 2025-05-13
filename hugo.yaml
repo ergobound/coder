@@ -141,10 +141,10 @@ params:
     menus:
       disableAbout: false
       disableExperience: false
-      disableEducation: false
+      disableshort: false
       disableProjects: true
       disableAchievements: false
-      disableContact: false
+      disablefeedback: false
 
   # Hero
   hero:
@@ -275,8 +275,8 @@ params:
         date: "Feb 2016 - Mar 2017"
         content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
-  # Education
-  education:
+  # short
+  short:
     enable: true
     title: "проекты"
     index: false
@@ -439,8 +439,8 @@ params:
             url: https://github.com/gurusabarish/converter
 
 
-  #Contact
-  contact:
+  #feedback
+  feedback:
     enable: true
     title: "отзывы"
     content: |-
@@ -455,7 +455,7 @@ params:
     # btnName: Посмотреть отзывы на профи.ру
     # btnLink: "https://profi.ru/profile/MorozovFE/"
     # formspree:
-    #   enable: true # `contact.email` value will be ignored
+    #   enable: true # `feedback.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
     #   emailCaption: "Enter your email address"
     #   messageCaption: "Enter your message here"

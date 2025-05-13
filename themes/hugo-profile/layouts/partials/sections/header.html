@@ -105,11 +105,11 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.education.enable | default false) (not (.Site.Params.navbar.menus.disableEducation | default false)) }}
+                    {{ if and (.Site.Params.short.enable | default false) (not (.Site.Params.navbar.menus.disableshort | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
-                            aria-label="education">
-                            {{ .Site.Params.education.title | default "Education" }}
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#short"
+                            aria-label="short">
+                            {{ .Site.Params.short.title | default "short" }}
                         </a>
                     </li>
                     {{ end }}
@@ -132,12 +132,12 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.contact.enable | default false) (not (.Site.Params.navbar.menus.disableContact | default false)) }}
-                    <!-- ТУТ Contact-->
+                    {{ if and (.Site.Params.feedback.enable | default false) (not (.Site.Params.navbar.menus.disablefeedback | default false)) }}
+                    <!-- ТУТ feedback-->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
-                            aria-label="contact">
-                            {{ .Site.Params.contact.title | default "Contact" }}
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#feedback"
+                            aria-label="feedback">
+                            {{ .Site.Params.feedback.title | default "feedback" }}
                         </a>
                     </li>
                     {{ end }}

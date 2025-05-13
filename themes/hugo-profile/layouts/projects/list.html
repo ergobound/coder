@@ -63,8 +63,8 @@
     </div>
 </div>
 <script>
-    var newURL = "/projects";
-    document.querySelector('[aria-label="education"]').href = newURL;
+    var newURL = "{{ .Site.BaseURL }}projects";
+    document.querySelector('[aria-label="short"]').href = newURL;
 </script>
 
 {{ end }}
