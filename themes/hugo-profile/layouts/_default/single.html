@@ -218,7 +218,7 @@
   }
 </script>
 
-<script>
+<!-- <script>
 
   var newURL = "{{ .Site.BaseURL }}projects";
  //  document.getElementById("link").href = newURL;
@@ -228,7 +228,7 @@
   document.querySelector('[aria-label="feedback"]').remove();
   // document.get;
 
-</script>
+</script> -->
 
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
 <script src="{{.Site.Params.staticPath}}/js/readingTime.js"></script>
