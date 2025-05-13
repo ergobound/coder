@@ -5,8 +5,8 @@ title: "ergobound/coder"
 theme: hugo-profile
 themesDir: themes
 
-relativeURLs: true
-canonifyURLs: true
+# relativeURLs: true
+# canonifyURLs: true
 
 # module :
 #   imports :
