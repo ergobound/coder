@@ -1,0 +1,511 @@
+baseURL: "https://ergobound.github.io/coder"
+languageCode: "ru"
+# "en-us"
+title: "ergobound/coder"
+theme: hugo-profile
+themesDir: themes
+
+relativeURLs = true
+canonifyURLs = true
+
+# module :
+#   imports :
+#     - path : hugo-profile
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 20
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+#   main:
+    # - identifier: blog
+    #   name: блог
+    #   title: Blog posts
+    #   url: /blogs
+    #   weight: 1
+    # - identifier: gallery
+    #   name: галерея
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "ergobound"
+  description: разработчик
+  # staticPath: ""  # The path to serve the static files from
+  # favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: true
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: true
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  color:
+    textColor: "#343a40"
+    secondaryTextColor: "#6c757d"
+    # textLinkColor: "#007bff"
+    # textLinkColor: "#00438b"
+    textLinkColor: "#33679d"
+    backgroundColor: "#eaedf0"
+    secondaryBackgroundColor: "#64ffda1a"
+    # primaryColor: "#007bff"
+    primaryColor: "#1b2835"
+    secondaryColor: "#f8f9fa"
+
+    darkmode:
+      textColor: "#e4e6eb"
+      secondaryTextColor: "#b0b3b8"
+      textLinkColor: "#ffffff"
+      backgroundColor: "#18191a"
+      secondaryBackgroundColor: "#212529"
+      primaryColor: "#ffffff"
+      secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "/coder" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable: false
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: true
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: false
+    intro: "Привет, меня зовут Фёдор!"
+    # title: "Fedor."
+    subtitle: "Программист и по совместительству преподаватель"
+    content: "Увлеченный разработчик, специализирующийся на написании программ и скриптов преимущественно на языке Python."
+    image: /images/me.webp
+    # image: /images/waves.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Написать в телеграм"
+      url: "https://t.me/we_wade"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-telegram
+          url: "https://t.me/we_wade"
+        - icon: fab fa-github
+          url: https://github.com/ergobound
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    # title: "обо мне"
+    menubutton: "обо мне"
+    image: "/images/me.webp"
+    name: Фёдор
+    content: |-
+      Программист и по совместительству преподаватель.</br>
+      Специализируюсь в написании программ и скриптов преимущественно на языке Python.
+      Проявляю немалый интерес к технологиям и искусству.
+      В настоящее время работаю над созданием телеграм-ботов, а так же параллельно <a href="https://your-teach.github.io/main" target="_blank"> преподаю программирование</a> на языках Python и Lua.</br>
+      Помимо создания программ имею опыт в настройке серверов на базе Ubuntu.</br></br>
+    skills:
+      enable: true
+      title: "Языки и технологии которыми я владею:"
+      items:
+        - "Python"
+        - "Lua"
+        - "Telegram API"
+        - "Renga STDL"
+        - "ComputerVision"
+        - "Html/CSS/Javascript"
+        - "LangChain"
+        - "LLMs и пр."
+    skills2:
+      enable: false
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "HTML"
+        - "CSS"
+        - "JavaScript"
+        - "React"
+        - "Node"
+        - "Express"
+
+  # Experience
+  experience:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - job: "Senior Software Developer"
+        company: "Facebook"
+        companyUrl: "https://example.com"
+        date: "Jan 2022 - present"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+      - job: "Software Developer"
+        company: "Amazon"
+        companyUrl: "https://example.com"
+        date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        info:
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Junior Software Developer"
+        company: "Apple"
+        companyUrl: "https://example.com"
+        date: "Jan 2020 - Aug 2020"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "UI/UX Designer"
+        company: "Netflix"
+        companyUrl: "https://example.com"
+        date: "June 2017 - Nov 2019"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Product Designer"
+        company: "Google"
+        companyUrl: "https://example.com"
+        date: "Feb 2016 - Mar 2017"
+        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+  # Education
+  education:
+    enable: true
+    title: "проекты"
+    index: false
+    endlink: true
+    endlinkurl: "/projects"
+    endlinktext: "Посмотреть все проекты..."
+    items:
+#################
+      - title: "Lovix bot"
+        content: |-
+          Пользовательский функционал:
+            - Получение бонусов за прохождение онлайн-тестов.
+            - Реферальная система.
+            - Связь с модерацией через тикеты помощи. 
+        
+          Админ-панель:
+            - Гибкая модерация содержмого бота.
+            - Массовая рассылка объявления.
+            - Удобные ответы на тикеты пользователей. 
+        featuredLink:
+          enable: true
+          name: "Схема проекта"
+          url: "https://www.figma.com/board/6UNuvPVvTbDdkgGEeDSNXC/LOVIX-TG-BOT--Copy-?node-id=0-1&t=G9a4fjhnMr0EYYid-1"
+          target: "_blank"
+        featuredLink2:
+          enable: true
+          name: "Открыть бот"
+          url: "https://t.me/Lovixbot"
+          target: "_blank"
+#################
+      - title: "Yourteach bot"
+        content: |-
+            Пользовательский функционал:
+            - Подтверждение оплаты за занятия
+            - Баланс оплаченных занятий
+            - Получение напоминаний о предстоящих занятий
+            - Просмотр календаря предстоящих занятий
+            - Напоминание об оплате и получение новостной рассылки
+
+            Админ-панель:
+            - Доступ к базе данных
+            - Моментальные уведомления об оплаченных занятиях
+            - Рассылка новостных объявлений и опросов
+            - Уведомления об ошибках в структуре бота
+            - Добавление/удаление/редактирование карточки ученика
+        
+        featuredLink:
+          enable: true
+          name: "Подробнее"
+          target: "_self"
+          url: "/projects/yourteach-bot/"
+#################
+      - title: "Chrome-расширение для Spotify"
+        content: |-
+          Расширение изменяющее свойства любой страницы Spotify, и позволяющее беспрепятственно копировать текст.
+          (Это личный некоммерческий проект.)
+        featuredLink:
+          enable: true
+          name: "Страница расширения"
+          target: "_blank"
+          url: "https://chromewebstore.google.com/detail/spotify-copy-text/bndgclaeopajicdmodejlpbhcbcpnbgf"
+#################
+      - title: "Lotus bot"
+        content: |-
+            Аналог площадки профи или авито, для сообщества людей работающих на рынке товаров
+
+            Пользовательский функционал:
+            - Создание объявлений для поиска или продажи товары
+            - Анонимный просмотр каталога товаров на форуме
+            - Связь с поддержкой через форму тикетов
+            - Возможность покупать контакты через привязанную кассу.
+
+            Админ-панель:
+            - Выборочная рассылка
+            - Доступ к базе данных модераторов и пользователей
+            - Просмотр и взаимодействие с запросами пользователей
+            - Удобные ответы на тикеты пользователей
+            - Ограничения пользователей, нарушающие правила
+
+            (Бот находится на стадии тестирования)
+        featuredLink:
+          enable: true
+          name: "Схема проекта"
+          target: "_blank"
+          url: "https://www.figma.com/board/P5OAyUyJLOCRPsXTjzJoGT/Block-Map?node-id=2-169&t=yDykRp7OvqJLn3X8-1"
+        featuredLink2:
+          enable: true
+          name: "Открыть бот"
+          target: "_blank"
+          url: "https://t.me/LotusSellersBot"
+#################
+      - title: "Futurolog bot"
+        content: |-
+            Это очень простой бот, который связан с искуственным интеллектом на базе DeepSeek.
+            Вначале он задает порядка десяти личных вопросов, после чего анализирует вашу ситуацию
+            и дает подброный ответ как вам поступить, чтобы изменить жизнь к лучшему. Эдакий тренер или наставник.
+        featuredLink:
+          enable: true
+          name: "Открыть бот"
+          target: "_blank"
+          url: "https://t.me/OptimentorBot"
+          
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievement.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievement.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievement.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: false
+    title: "проектыv2"
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+
+  #Contact
+  contact:
+    enable: true
+    title: "отзывы"
+    content: |-
+      <!-- Profi.ru widget start -->  
+
+      <div class="click_profi" onclick="click_profi()" style="margin: 0 auto; display: block; width: 300px; height: 100px; cursor:pointer;">
+      <div class="profi-widget" style="filter: saturate(0.4); pointer-events: none;" data-id="5e7a19822870770ad0061e4d0e8c5f7f" data-type="300x100">
+          Powered by <a href="https://profi.ru/profile/MorozovFE">Profi.ru</a>
+      </div></div>
+      <script src="https://profi.ru/jqs/widget/widget.js"></script>
+      <!-- Profi.ru widget end -->
+    # btnName: Посмотреть отзывы на профи.ру
+    # btnLink: "https://profi.ru/profile/MorozovFE/"
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  # footer:
+  #   recentPosts:
+  #     path: "blogs"
+  #     count: 3
+  #     title: Recent Posts
+  #     enable: true
+  #     disableFeaturedImage: false
+  #   socialNetworks:
+  #     github: https://github.com
+  #     linkedin: https://linkedin.com
+  #     twitter: https://twitter.com
+  #     instagram: https://instagram.com
+  #     facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: false
+    readTime:
+      enable: false
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Читать"
+    toc: "Оглавление"
+    copyright: "Credo quia absurdum."
+    pageNotFound: "Страница не найдена"
+    emailText: "Загляните на этот сайт"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  customScripts: |-
+    <script>
+      function click_profi() {
+        window.open('https://profi.ru/profile/MorozovFE', '_blank');
+      }
+    </script>
