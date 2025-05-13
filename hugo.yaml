@@ -179,7 +179,7 @@ params:
     enable: true
     # title: "обо мне"
     menubutton: "обо мне"
-    image: "/images/me.webp"
+    image: "/images/meto.jpg"
     name: Фёдор
     headerlink: # "#about"
     content: |-
@@ -197,7 +197,7 @@ params:
         - "Telegram API"
         - "Renga STDL"
         - "ComputerVision"
-        - "Html/CSS/Javascript"
+        - "Html/CSS/Js"
         - "LangChain"
         - "LLMs и пр."
     skills2:
