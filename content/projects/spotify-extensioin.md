@@ -3,7 +3,7 @@ title: "Chrome-расширение для Spotify"
 draft: false
 description: ""
 image: /images/projects/spotify-extension.png
-imageenable: false
+imageenable: true
 featuredLink:
     enable: true
     name: "Открыть расширение"
