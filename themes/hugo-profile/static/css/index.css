@@ -239,12 +239,6 @@ header .navbar.animate {
     margin-right: 12%;
 }
 
-@media all and (max-width:768px) {
-    #about {
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-}
 
 #about h3 {
     color: var(--text-secondary-color) !important;
@@ -472,6 +466,10 @@ header .navbar.animate {
 @media all and (max-width:768px) {
     #short .card .card-body {
         padding: 2rem 1rem;
+    }
+    #about {
+        margin-left: 1%;
+        margin-right: 1%;
     }
 }
 
