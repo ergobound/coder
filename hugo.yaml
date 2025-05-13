@@ -181,12 +181,13 @@ params:
     menubutton: "обо мне"
     image: "/images/me.webp"
     name: Фёдор
+    headerlink: # "#about"
     content: |-
       Программист и по совместительству преподаватель.</br>
       Специализируюсь в написании программ и скриптов преимущественно на языке Python.
       Проявляю немалый интерес к технологиям и искусству.
       В настоящее время работаю над созданием телеграм-ботов, а так же параллельно <a href="https://your-teach.github.io/main" target="_blank"> преподаю программирование</a> на языках Python и Lua.</br>
-      Помимо создания программ имею опыт в настройке серверов на базе Ubuntu.</br></br>
+      Помимо этого имею опыт в настройке серверов на базе Ubuntu.</br></br>
     skills:
       enable: true
       title: "Языки и технологии которыми я владею:"
@@ -281,6 +282,7 @@ params:
     title: "проекты"
     index: false
     endlink: true
+    headerlink: "projects" # "#short"
     endlinkurl: "/projects"
     endlinktext: "Посмотреть все проекты..."
     items:

@@ -2,10 +2,21 @@
     padding: 60px 0;
     line-height: 1.7em;
     font-size: 17px;
-    min-height: 1080px;
-    /* display: flex; */
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+    /* min-height: 1080px; */
     /* justify-content: auto; */
-}
+    /* max-height: 100%; */
+} 
+
+/* #single {
+    padding: 60px 0;
+    line-height: 1.7em;
+    font-size: 17px;
+    min-height: 1080px;
+} */
+
 
 #single .title > h1 {
     opacity: 0.8;
