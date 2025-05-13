@@ -501,9 +501,11 @@ header .navbar.animate {
 #education .card .card-body > a h6:hover::after, #education .card .card-body > a h6:focus::after, #education .card .card-body > a h6:active::after {
     width: 100%;
 }
-
+/* ТУТ */
 #education .card .card-body a.btn {
     margin-top: 0.4em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
     opacity: 0.9;
     border: 1px solid var(--primary-color) !important;
     color: var(--text-color) !important;
