@@ -1,0 +1,32 @@
+
+/* Default font for body */
+body {
+    font-family: "Lora", serif !important;
+}
+
+/* secondary font */
+.secondary-font, #secondary-font {
+    font-family: "Lora", serif;
+}
+
+/* primary font prev: Alata */ 
+/* Noto Sans Mono */
+/* Source Code Pro */
+/* Montserrat */
+/* Geologica */
+.primary-font, #primary-font {
+    font-family: "Noto Sans Mono", sans-serif;
+}
+
+/* Default font */
+.default-font, #default-font {
+    font-family: "Roboto", sans-serif;
+}
+
+
+@font-face {
+    font-family: "Lora"; 
+    src: url("../fonts/Lora.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
