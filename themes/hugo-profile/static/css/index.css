@@ -480,9 +480,9 @@ header .navbar.animate {
         margin-right: 1%;
 
     }
-    #about .image img {
-        max-width: 70%;
-    }
+    /* #about .image img {
+        max-width: 100%;
+    } */
     .primary-font {
         margin: 0.6em;
     }
