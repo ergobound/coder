@@ -464,6 +464,13 @@ header .navbar.animate {
     padding: 2rem;
 }
 
+.primary-font {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 @media all and (max-width:768px) {
     #short .card .card-body {
         padding: 2rem 1rem;
@@ -476,7 +483,17 @@ header .navbar.animate {
     #about .image img {
         max-width: 70%;
     }
+    .primary-font {
+        margin: 0.6em;
+    }
+    .social-button {
+        margin-bottom: 0px;
+    }
+    .mb-5 {
+        margin-bottom: 0.6rem !important;
+    }
 }
+
 
 #short .card:hover {
     transition: 0.3s;
