@@ -159,7 +159,7 @@ params:
       enable: true
     # roundImage: true # Make hero image circular | default false
     button:
-      enable: true
+      enable: false
       name: "Написать в телеграм"
       url: "https://t.me/we_wade"
       download: true
@@ -187,7 +187,7 @@ params:
       Специализируюсь в написании программ и скриптов преимущественно на языке Python.
       Проявляю большой интерес к технологиям и искусству.
       В настоящее время работаю над созданием телеграм-ботов, а так же параллельно <a href="https://your-teach.github.io/main" target="_blank"> преподаю программирование</a> на языках Python и Lua.</br>
-      Помимо этого имею опыт в настройке серверов на базе Ubuntu.</br></br>
+      Помимо прочего имею опыт в настройке серверов на базе Ubuntu.</br></br>
     skills:
       enable: true
       title: "Языки и технологии которыми я владею:"
