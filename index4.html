@@ -9,14 +9,15 @@
           />
     <style>
       #myCarousel {
-        --f-carousel-spacing: 10px;
-        --f-carousel-slide-width: 60%;
+        --f-transition-duration: 13s;
         max-width: 640px;
         width: auto;
         margin: 0 auto;
       }
 
       #myCarousel .f-carousel__slide {
+        --f-carousel-spacing: 10px;
+        --f-carousel-slide-width: 60%;
         padding: 0px;
         background: #c5c0c0;
         max-height: 480px;
@@ -80,10 +81,11 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/l10n/de.umd.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/l10n/de.umd.js"></script> -->
     <script>
       new Carousel(document.getElementById("myCarousel"), {
         // l10n: Carousel.l10n.en,
+        transition: "classic"
       });
     </script>
   </body>

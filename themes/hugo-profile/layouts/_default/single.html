@@ -2,9 +2,6 @@
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
 <!-- GALLERY -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -36,14 +33,26 @@
 {{ if .Params.gallery.vert | default false}}
   <style>
   #myCarousel {
-      --f-carousel-slide-width: {{ .Params.gallery.slidewidth | default "50%"}};
+      --f-carousel-slide-width: {{ .Params.gallery.slidewidth | default "50%" }};
       max-width: {{ .Params.gallery.maxwidth | default "640px" }};
   }
   #myCarousel .f-carousel__slide {
     padding: {{ .Params.gallery.padding | default "0px" }};
   }
+  @media all and (max-width:768px) {
+    #myCarousel {
+        --f-carousel-spacing: 1px;
+        --f-carousel-slide-width: 75%;
+      }
+  }
   </style>
 {{ end }}
+
+<!-- <style>
+  .f-carousel {
+    --f-transition-duration: 13s !important;
+}
+</style> -->
 <!-- fontawesome -->
 <script defer src="{{.Site.Params.staticPath}}/fontawesome-6/all-6.4.2.js"></script>
 
@@ -61,7 +70,26 @@
         <div class="pr-lg-4">
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
+              {{ if .Params.gallery.enable | default false}}
 
+                <div class="start-gallery" style="padding-bottom:16px;">
+                  <div class="f-carousel" id="myCarousel">
+                    {{ range .Params.gallery.images }}
+                      <div
+                          class="f-carousel__slide"
+                              href="{{ .src }}"
+                          data-fancybox="gallery"
+                          >
+                      <img
+                          alt="" class="carousel"
+                          data-lazy-src="{{ .src }}"
+                          />
+                      </div>
+                    {{ end }}
+                  </div>
+                </div>
+
+              {{ end}}
               {{ if or (.Params.featuredLink.enable) (.Params.featuredLink2.enable) (.Params.featuredLink3.enable) }}
                 <div class="py-1">
                     
@@ -118,26 +146,7 @@
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
-          {{ if .Params.gallery.enable | default false}}
-
-            <div class="start gallery" style="padding-bottom:16px;">
-              <div class="f-carousel" id="myCarousel">
-                {{ range .Params.gallery.images }}
-                  <div
-                      class="f-carousel__slide"
-                          href="{{ .src }}"
-                      data-fancybox="gallery"
-                      >
-                  <img
-                      alt="" class="carousel"
-                      data-lazy-src="{{ .src }}"
-                      />
-                  </div>
-                {{ end }}
-              </div>
-            </div>
-
-          {{ end}}
+          
 
 
           <article class="page-content  p-2">
@@ -224,14 +233,27 @@
   }
 </script>
 <!-- GALLERY -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
-  new Carousel(document.getElementById("myCarousel"), {
+
+  const instance = new Carousel(document.getElementById("myCarousel"), {
     // Your custom options
     Dots: false,
     transition: "classic",
+    preload: 3,
+    friction: 0.03,
+    // infinite: false,
+    // transitionDuration: 0,
     // adaptiveHeight: true,
   });
+  // instance.settings.transitionDuration = 8000; // Новое значение
+  // instance.reinit();
+  // setTimeout(() => {
+  //   carousel.reinit();
+  // }, 100);
     
   Fancybox.bind('[data-fancybox="gallery"]', {
     Hash: false,

@@ -18,9 +18,9 @@ gallery:
     # buttons: "10px"
     vert: true
     # Только для vert:
-    slidewidth: 50%
-    maxwidth: 640px
-    padding: 0px
+    # slidewidth: 50%
+    # maxwidth: 640px
+    # padding: 3px
 featuredLink:
     enable: true
     name: "Схема проекта"

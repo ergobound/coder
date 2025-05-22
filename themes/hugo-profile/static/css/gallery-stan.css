@@ -4,6 +4,9 @@
     margin: 0 auto;
     background-color: rgba(77, 148, 157, 0.081);
 }
+/* .f-carousel {
+    --f-transition-duration: 13s !important;
+} */
 .f-carousel__slide {
     width: 640px;
     height: 480px;
