@@ -3,7 +3,7 @@ title: "Yourteach telegram bot"
 draft: false
 description: ""
 image: /images/projects/yourteach-bot.png
-imageenable: false
+imageenable: true
 gallery:
     enable: false
     images:
