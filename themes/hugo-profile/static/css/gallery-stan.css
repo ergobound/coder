@@ -1,0 +1,48 @@
+#myCarousel {
+    max-width: 640px;
+    width: auto;
+    margin: 0 auto;
+    background-color: rgba(77, 148, 157, 0.081);
+}
+.f-carousel__slide {
+    width: 640px;
+    height: 480px;
+}
+.f-carousel__slide img {
+    max-width: 100%;
+    height: auto;
+}
+#myCarousel .f-carousel__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media all and (min-width:768px) {
+    .f-carousel {
+    --f-button-width: 38px;
+    --f-button-height: 38px;
+
+    --f-button-svg-width: 16px;
+    --f-button-svg-height: 16px;
+    --f-button-svg-stroke-width: 2.5;
+
+    --f-button-color: rgb(163, 156, 156);
+    --f-button-border-radius: 50%;
+    --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0
+            0 / 30%);
+
+    --f-button-bg: #1490d8aa;
+    --f-button-hover-bg: #1490d8e2;
+    --f-button-hover-color: rgb(207, 207, 207);
+    --f-button-active-bg: #b0e2ffe6;
+    --f-button-next-pos: 10px;
+    --f-button-prev-pos: 10px; 
+    }
+}
+button.f-button {
+    mix-blend-mode: difference;
+}
+.carousel {
+    max-height: 480px;
+    max-width: 640px;
+}

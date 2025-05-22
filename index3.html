@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+          />
+    <style>
+      .f-carousel__slide {
+        min-height: 60px;
+      }
+
+      .f-carousel__slide img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="f-carousel" id="myCarousel">
+        <div class="f-carousel__slide">
+          <img data-lazy-src="https://lipsum.app/id/1/1200x675" />
+        </div>
+        <div class="f-carousel__slide">
+          <img data-lazy-src="https://lipsum.app/id/2/1200x675" />
+        </div>
+        <div class="f-carousel__slide">
+          <img data-lazy-src="https://lipsum.app/id/3/1200x675" />
+        </div>
+        <div class="f-carousel__slide">
+          <img data-lazy-src="https://lipsum.app/id/4/1200x675" />
+        </div>
+        <div class="f-carousel__slide">
+          <img data-lazy-src="https://lipsum.app/id/5/1200x675" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script>
+      new Carousel(document.getElementById("myCarousel"), {
+        // Your custom options
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

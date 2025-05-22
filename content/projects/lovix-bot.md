@@ -4,7 +4,23 @@ draft: false
 description: "Телеграм бот для прохождения тестов"
 image: /images/projects/lovix/lovix-main.png
 imageenable: false
-
+gallery:
+    enable: true
+    images:
+        - src: /images/projects/lovix/1.png
+        - src: /images/projects/lovix/2.png
+        - src: /images/projects/lovix/3.png
+        - src: /images/projects/lovix/4.png
+        - src: /images/projects/lovix/5.png
+        - src: /images/projects/lovix/6.png
+        - src: /images/projects/lovix/7.png
+        - src: /images/projects/lovix/8.png
+    # buttons: "10px"
+    vert: true
+    # Только для vert:
+    slidewidth: 50%
+    maxwidth: 640px
+    padding: 0px
 featuredLink:
     enable: true
     name: "Схема проекта"

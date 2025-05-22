@@ -1,7 +1,49 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-
+<!-- GALLERY -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+      />
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+      />
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css"
+      />
+<!--  -->
+<!-- GALLERY STYLE -->
+{{ if .Params.gallery.standard | default false}}
+  <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/gallery-stan.css">
+{{ end }}
+{{ if .Params.gallery.vert | default false}}
+  <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/gallery-vert.css">
+{{ end }}
+<style>
+  @media all and (min-width:768px) {
+    .f-carousel {
+      --f-button-next-pos: {{ .Params.gallery.buttons | default "10px"}};
+      --f-button-prev-pos: {{ .Params.gallery.buttons | default "10px"}}; 
+    }
+  }
+</style>
+{{ if .Params.gallery.vert | default false}}
+  <style>
+  #myCarousel {
+      --f-carousel-slide-width: {{ .Params.gallery.slidewidth | default "50%"}};
+      max-width: {{ .Params.gallery.maxwidth | default "640px" }};
+  }
+  #myCarousel .f-carousel__slide {
+    padding: {{ .Params.gallery.padding | default "0px" }};
+  }
+  </style>
+{{ end }}
 <!-- fontawesome -->
 <script defer src="{{.Site.Params.staticPath}}/fontawesome-6/all-6.4.2.js"></script>
 
@@ -76,69 +118,33 @@
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
+          {{ if .Params.gallery.enable | default false}}
+
+            <div class="start gallery" style="padding-bottom:16px;">
+              <div class="f-carousel" id="myCarousel">
+                {{ range .Params.gallery.images }}
+                  <div
+                      class="f-carousel__slide"
+                          href="{{ .src }}"
+                      data-fancybox="gallery"
+                      >
+                  <img
+                      alt="" class="carousel"
+                      data-lazy-src="{{ .src }}"
+                      />
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+
+          {{ end}}
+
+
           <article class="page-content  p-2">
           {{ .Content | emojify }}
           </article>
         </div>
       </div>
-      <!-- <div class="col-sm-12 col-md-12 col-lg-3">
-        <div id="stickySideBar" class="sticky-sidebar">
-          {{ if .Params.toc | default true}}
-          <aside class="toc">
-              <h5>
-                {{ .Site.Params.terms.toc | default "Table Of Contents" }}
-              </h5>
-              <div class="toc-content">
-                {{.TableOfContents}}
-              </div>
-          </aside>
-          {{ end }}
-
-          {{ if .Params.tags }}
-          <aside class="tags">
-            <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              {{range .Params.tags}}
-              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}"
-                {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}
-              >{{.}}</a></li>
-              {{end}}
-            </ul>
-          </aside>
-          {{end}}
-
-          {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
-          <aside class="social">
-            <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject={{ .Title }}&amp;body={{ .Site.Params.terms.emailText | default "Check out this site" }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}'>
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          {{ end }}
-        </div>
-      </div>
-    </div> -->
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-9 p-4">
         {{ template "_internal/disqus.html" . }}
@@ -217,6 +223,43 @@
     stickySideBarElem.style.top = "50px";
   }
 </script>
+<!-- GALLERY -->
+
+<script>
+  new Carousel(document.getElementById("myCarousel"), {
+    // Your custom options
+    Dots: false,
+    transition: "classic",
+    // adaptiveHeight: true,
+  });
+    
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Hash: false,
+    Thumbs: false,
+    compact: false,
+
+    contentClick: "toggleCover",
+    wheel : "slide",
+
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+
+    Images: {
+      Panzoom: {
+        panMode: "mousemove",
+        mouseMoveFactor: 1.1,
+        mouseMoveFriction: 0.12
+      },
+    },
+  });    
+</script>
+
+<!--  -->
 
 <!-- <script>
 

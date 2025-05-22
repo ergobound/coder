@@ -1,5 +1,9 @@
 #single {
-    padding: 60px 0;
+    /* было: */
+    /* padding: 60px 0;  */ 
+    /* стало: */
+    padding: 10px 0;
+      
     line-height: 1.7em;
     font-size: 17px;
     display: inline-block;
