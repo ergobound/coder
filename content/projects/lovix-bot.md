@@ -1,5 +1,6 @@
 ---
 title: "Lovix telegram bot"
+date: 2025-05-21
 draft: false
 description: "Телеграм бот для прохождения тестов"
 image: /images/projects/lovix/lovix-main.png

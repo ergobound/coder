@@ -95,8 +95,8 @@ params:
   animate: false
 
   theme:
-    # disableThemeToggle: true
-    # defaultTheme: "light" # dark
+    disableThemeToggle: false
+    defaultTheme: "auto" # dark light auto
 
   font:
     fontSize: 1rem # default: 1rem
@@ -296,7 +296,7 @@ params:
         
           Админ-панель:
             - Гибкая модерация содержмого бота.
-            - Массовая рассылка объявления.
+            - Массовая рассылка объявлений.
             - Удобные ответы на тикеты пользователей. 
         featuredLink:
           enable: true
