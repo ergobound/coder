@@ -1,5 +1,6 @@
 ---
 title: "Yourteach telegram bot"
+date: 2025-05-23
 draft: false
 description: ""
 image: /images/projects/yourteach-bot.png
