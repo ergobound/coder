@@ -242,7 +242,7 @@ params:
           - Lead backend developer for a product.
           - Created a frontend design for a product.
 
-      - job: "Junior Software Developer1"
+      - job: "Junior Software Developer"
         company: "Apple"
         companyUrl: "https://example.com"
         date: "Jan 2020 - Aug 2020"
