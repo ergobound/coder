@@ -3,6 +3,7 @@ title: "Yourteach telegram bot"
 date: 2025-05-23
 draft: false
 description: ""
+cardtext: true
 image: /images/projects/yourteach-bot.png
 imageenable: true
 gallery:

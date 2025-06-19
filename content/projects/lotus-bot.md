@@ -3,6 +3,7 @@ title: "Lotus telegram bot"
 date: 2025-05-22
 draft: false
 description: ""
+cardtext: true
 image: /images/projects/lotus-bot.png
 imageenable: true
 featuredLink:

@@ -16,8 +16,8 @@
     <div class="row">
         {{ range .Paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
-            <!-- ТУТ h-0 был h-100 :  -->
-            <div class="card my-3 h-200" title="{{ .Title }}">
+            <!-- ТУТ было "card my-3 h-100" :  -->
+            <div class="card my-3" title="{{ .Title }}" >
                 {{ if .Params.image }}
                 <div class="card-head">
                     <a href="{{ .RelPermalink }}">
@@ -26,16 +26,19 @@
                 </div>
                 {{ end }}
                 
-                <div class="card-body bg-transparent p-3">
+                <div class="card-body bg-transparent p-3" >
                     <div class="pb-2 bg-transparent">
                         {{ range .Params.badges }}
                         <span class="badge badge-secondary">{{ . }}</span>
                         {{ end }}
                     </div>
                     <h5 class="card-title bg-transparent">{{ .Title | truncate 50 }}</h5>
+                    {{ if .Params.cardtext }}
                     <div class="card-text bg-transparent secondary-font">
-                        {{ .Summary | truncate 200 | safeHTML }}
+                        <!-- truncate - максимальное количество символов -->
+                        {{ .Summary | truncate 150 | safeHTML }}
                     </div>
+                    {{ end }}
                 </div>
                 
                 <div class="card-footer py-3">

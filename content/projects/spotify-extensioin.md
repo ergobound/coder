@@ -3,6 +3,7 @@ title: "Chrome-расширение для Spotify"
 date: 2025-05-20
 draft: false
 description: ""
+cardtext: true
 image: /images/projects/spotify-extension.png
 imageenable: true
 featuredLink:
