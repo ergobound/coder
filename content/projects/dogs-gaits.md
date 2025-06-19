@@ -6,6 +6,7 @@ description: ""
 image: /images/projects/gaits-screen.jpg
 imageenable: false
 video: /video/dog-gaits.mov
+
 # featuredLink:
 #     enable: true
 #     name: "Репозиторий проекта"
@@ -13,7 +14,9 @@ video: /video/dog-gaits.mov
 #     url: "https://github.com/ergobound/Analysis-Dog-Bot"
 ---
 
+
 В проекте используется:
  - transformers
  - VideoLLaMA3
  - LoRA - Low Rank Adaptation
+ - python-telegram-bot api
