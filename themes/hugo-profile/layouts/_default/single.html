@@ -146,6 +146,13 @@
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
+          {{ if .Params.video }}
+            </video>
+            </div> 
+            <video style="display: block; margin: auto; margin-right: auto !important; margin-left: auto !important; max-width: 100%; height: auto" width="600" controls muted>
+              <source src="{{ .Params.video }}" type="video/mp4">
+            </video>
+          {{ end }}
           
 
 

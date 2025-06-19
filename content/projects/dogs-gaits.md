@@ -5,6 +5,7 @@ draft: false
 description: ""
 image: /images/projects/gaits-screen.jpg
 imageenable: false
+video: /video/dog-gaits.mov
 # featuredLink:
 #     enable: true
 #     name: "Репозиторий проекта"
@@ -12,10 +13,7 @@ imageenable: false
 #     url: "https://github.com/ergobound/Analysis-Dog-Bot"
 ---
 
-</video>
-</div> -->
-<video style="display: block; margin: auto; margin-right: auto !important; margin-left: auto !important; max-width: 100%; height: auto" width="600" controls muted>
-  <source src="/video/dog-gaits.mov" type="video/mp4">
-</video>
-
-Скоро здесь будет описание проекта...
+В проекте используется:
+ - transformers
+ - VideoLLaMA3
+ - LoRA - Low Rank Adaptation
