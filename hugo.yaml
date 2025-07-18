@@ -301,7 +301,8 @@ params:
         featuredLink:
           enable: true
           name: "Схема проекта"
-          url: "https://www.figma.com/board/6UNuvPVvTbDdkgGEeDSNXC/LOVIX-TG-BOT--Copy-?node-id=0-1&t=G9a4fjhnMr0EYYid-1"
+          # url: "https://www.figma.com/board/6UNuvPVvTbDdkgGEeDSNXC/LOVIX-TG-BOT--Copy-?node-id=0-1&t=G9a4fjhnMr0EYYid-1"
+          url: https://www.figma.com/board/yucqN9t6dnG8eAD1qjTuu1/LOVIX-TG-BOT--Copy-?node-id=75-2477&t=sjGmwUeka5VfT3Zy-0
           target: "_blank"
         featuredLink2:
           enable: true
