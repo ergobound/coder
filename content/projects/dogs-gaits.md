@@ -8,11 +8,11 @@ image: /images/projects/gaits-screen.jpg
 imageenable: false
 video: /video/dog-gaits.mov
 
-# featuredLink:
-#     enable: true
-#     name: "Репозиторий проекта"
-#     target: "_blank"
-#     url: "https://github.com/ergobound/Analysis-Dog-Bot"
+featuredLink:
+    enable: true
+    name: "Репозиторий проекта"
+    target: "_blank"
+    url: "https://github.com/ergobound/Analysis-Dog-Bot"
 ---
 
 Приватный телеграм бот на базе мультимодальной VLM (Visual Language Model) VideoLLaMA3.
