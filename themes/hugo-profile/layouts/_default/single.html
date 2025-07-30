@@ -71,7 +71,6 @@
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
               {{ if .Params.gallery.enable | default false}}
-
                 <div class="start-gallery" style="padding-bottom:16px;">
                   <div class="f-carousel" id="myCarousel">
                     {{ range .Params.gallery.images }}
@@ -88,8 +87,13 @@
                     {{ end }}
                   </div>
                 </div>
-
               {{ end}}
+              {{ if .Params.video }}
+                <video style="display: block; margin: auto; margin-right: auto !important; margin-left: auto !important; max-width: 100%; height: auto" width="600" controls muted autoplay>
+                  <source src="{{ .Params.video }}" type="video/mp4">
+                </video>
+                </br>
+              {{ end }}
               {{ if or (.Params.featuredLink.enable) (.Params.featuredLink2.enable) (.Params.featuredLink3.enable) }}
                 <div class="py-1">
                     
@@ -145,13 +149,6 @@
           <div class="featured-image">
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
-          {{ end }}
-          {{ if .Params.video }}
-            </video>
-            </div> 
-            <video style="display: block; margin: auto; margin-right: auto !important; margin-left: auto !important; max-width: 100%; height: auto" width="600" controls muted autoplay>
-              <source src="{{ .Params.video }}" type="video/mp4">
-            </video>
           {{ end }}
           
 
