@@ -12,7 +12,7 @@ featuredLink:
     enable: true
     name: "Репозиторий проекта"
     target: "_blank"
-    url: "https://github.com/ergobound/Analysis-Dog-Bot"
+    url: "https://github.com/ergobound/analysis-dog-gaits"
 ---
 
 Приватный телеграм бот на базе мультимодальной VLM (Visual Language Model) VideoLLaMA3.
