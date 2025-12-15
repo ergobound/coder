@@ -13,7 +13,7 @@ gallery:
         - src: https://lipsum.app/id/2/1280x960
         - src: https://lipsum.app/id/3/1280x960
         - src: https://your-teach.github.io/main/img/mobile/2.png
-        - src: https://your-teach.github.io/main/img/1.png
+        - src: https://your-teach.github.io/main/img/1.png 
     standard: true
 # featuredLink:
 #     enable: true
