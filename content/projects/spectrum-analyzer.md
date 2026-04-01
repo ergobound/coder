@@ -15,10 +15,11 @@ gallery:
         - src: /images/projects/spectrum-analyzer/d.png
     # buttons: "10px"
     vert: false
+    standard: true
     # Только для vert:
-    slidewidth: 50%
-    maxwidth: 640px
-    padding: 3px
+    # slidewidth: 50%
+    # maxwidth: 640px
+    # padding: 3px
 ---
 Анализатор спектра для различных платформ SDR,
 написанный на базе [qspectrumanalyzer](https://github.com/ergobound/qspectrumanalyzer)
