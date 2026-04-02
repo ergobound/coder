@@ -1,0 +1,9 @@
+Для hugo необходимо:
+Установить Go -> https://go.dev/doc/install
+Установить Hugo -> https://github.com/gohugoio/hugo/releases/tag/v0.159.2
+Прописать hugo в PATH
+
+Запуск: hugo server
+
+Более подробно здесь:
+https://gohugo.io/getting-started/quick-start/

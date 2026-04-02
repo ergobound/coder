@@ -7,17 +7,15 @@
 /* .f-carousel {
     --f-transition-duration: 13s !important;
 } */
-.f-carousel__slide {
+/* .f-carousel__slide {
     width: 640px;
     height: 480px;
-}
+} */
 .f-carousel__slide img {
-    /* max-width: 100%; */
-    max-height: 100%;
-    /* max-height: 480px; */
-    max-width: 640px;
-    /* height: auto; */
-    width: auto;
+    max-width: 100%;
+    max-height: 480px;
+    /* max-width: 640px; */
+    height: auto;
 }
 #myCarousel .f-carousel__slide {
     display: flex;

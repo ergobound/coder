@@ -16,15 +16,14 @@ gallery:
     # buttons: "10px"
     vert: false
     standard: true
+    # width: 
     # Только для vert:
     # slidewidth: 50%
     # maxwidth: 640px
     # padding: 3px
 ---
 Анализатор спектра для различных платформ SDR,
-написанный на базе [qspectrumanalyzer](https://github.com/ergobound/qspectrumanalyzer)
-
-Для запуска и использовании программы необходимо приобрести лицензионный USB-накопитель.
+написанный на базе <a href="https://github.com/xmikos/qspectrumanalyzer" target="_blank">qspectrumanalyzer</a>
 
 О преимуществах данной версии читайте далее.
 
@@ -58,3 +57,6 @@ gallery:
 под каждым из которых есть водопад, в котором хранится история всех предыдущих пиков.
  - Переключатель Downlink/Uplink
  - Каждый бар можно отдельно включить/выключить
+
+
+*Для запуска и использовании программы необходимо приобрести лицензионный USB-накопитель.*
