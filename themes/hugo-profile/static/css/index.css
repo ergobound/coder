@@ -611,15 +611,17 @@ a.edu_end_btn:hover {
 }
 
 /* feedback */
-
-#feedback {
+/* Теперь стили #feedback и #feedback h3 внутри feedback.html , чтобы распространялись
+на все страницы, иначе придется весь index.css подгонять всем */
+/* #feedback { */
     /* margin-top: 0px; */
     /* margin-bottom: 0px;  */
     /* padding-bottom: 0px; */
     /* bottom: 0px; */
     /* margin: 0 0 0 0; */
     /* padding: 0px 0px; */
-    padding-bottom: 0rem !important;
+    /* padding-bottom: 0rem !important; */
+    /* padding-bottom: calc(1rem * 0.001) !important; */
     /* top: 200px; */
     /* bottom: 100%; */
 
@@ -628,27 +630,16 @@ a.edu_end_btn:hover {
     /* margin: 20px 0px 0px; */
     /* max-width: 100%; */
 
-}
+/* } */
 
-#feedback h3 {
+/* #feedback h3 {
     color: var(--text-secondary-color) !important;
     width: 30%;
     border-top: 2px solid #32a1ce;
     border-radius: 100%;
     margin: 0 auto;
     display: block;
-
-    /* margin-left: 50%; */
-    /* padding-left: 70%; */
-    /* padding-right: 70%; */
-
-    /* position: block; */
-    /* text-align: center !important; */
-    /* margin-left: center;
-     */
-
-    
-}
+} */
 
 #feedback .btn {
     transition: none;

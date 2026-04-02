@@ -34,7 +34,7 @@ enableRobotsTXT: true
     #shortname: your-disqus-shortname
 
 pagination:
-  pagerSize: 20
+  pagerSize: 20 # Здесь можно выставить сколько будет максимум "статей" на одной странице (вроде)
 
 markup:
   goldmark:
@@ -279,14 +279,15 @@ params:
   # short
   short:
     enable: true
-    title: "проекты"
-    index: false
+    title: "проекты" # отсюда берется название для заголовка в меню
+    # а заголовок "последние проекты" вписан в short.html
+    index: false 
     endlink: true
     headerlink: "projects" # "#short"
     endlinkurl: "/projects"
     endlinktext: "Посмотреть все проекты..."
+    # В short больше не работают Items:
     items:
-#################
       - title: "Lovix bot"
         content: |-
           Пользовательский функционал:
@@ -309,7 +310,6 @@ params:
           name: "Открыть бот"
           url: "https://t.me/Lovixbot"
           target: "_blank"
-#################
       - title: "Yourteach bot"
         content: |-
             Пользовательский функционал:
@@ -331,7 +331,6 @@ params:
           name: "Подробнее"
           target: "_self"
           url: "/projects/yourteach-bot/"
-#################
       - title: "Chrome-расширение для Spotify"
         content: |-
           Расширение изменяющее свойства любой страницы Spotify, и позволяющее беспрепятственно копировать текст.
@@ -341,7 +340,6 @@ params:
           name: "Страница расширения"
           target: "_blank"
           url: "https://chromewebstore.google.com/detail/spotify-copy-text/bndgclaeopajicdmodejlpbhcbcpnbgf"
-#################
       - title: "Lotus bot"
         content: |-
             Аналог площадки профи или авито, для сообщества людей работающих на рынке товаров

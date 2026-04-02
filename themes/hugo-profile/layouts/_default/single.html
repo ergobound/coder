@@ -311,8 +311,13 @@
 
 </script> -->
 
+
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
 <script src="{{.Site.Params.staticPath}}/js/readingTime.js"></script>
 {{end}}
 
+
+<div>{{- partial "sections/feedback.html" . -}}</div>
+
 {{ end }}
+

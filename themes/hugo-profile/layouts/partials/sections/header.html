@@ -133,9 +133,10 @@
                     {{ end }}
 
                     {{ if and (.Site.Params.feedback.enable | default false) (not (.Site.Params.navbar.menus.disablefeedback | default false)) }}
-                    <!-- ТУТ feedback-->
+                    <!-- feedback-->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#feedback"
+                        <!-- было так -> href="{{ .Site.BaseURL | relURL }}#feedback" -->
+                        <a class="nav-link" href="#feedback"
                             aria-label="feedback">
                             {{ .Site.Params.feedback.title | default "feedback" }}
                         </a>

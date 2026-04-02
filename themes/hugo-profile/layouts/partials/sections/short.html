@@ -1,71 +1,35 @@
 {{ if .Site.Params.short.enable | default false }}
 <section id="short" class="py-5">
     <div class="container">
-        <h3 class="text-center">{{ .Site.Params.short.title | default "short" }}</h3>
+        <!-- <h3 class="text-center">{{ .Site.Params.short.title | default "short" }}</h3> -->
+        <h3 class="text-center">последние проекты</h3>
         <div class="row justify-content-center py-5">
-            {{ $indexMenu := .Site.Params.short.index }}
-            {{ range $index, $element := .Site.Params.short.items }}
-            <div class="col-12 p-0">
+            <!-- Старт нового цикла -->
+            <!-- Находим только статьи из projects -->
+            {{ $pages := where site.RegularPages "Section" "projects" }}
+            {{ range first 3 $pages }}
+                <div class="col-12 p-0">
                 <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    {{ if $indexMenu }}
-                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
-                        <div class="py-2">
-                            <span class="index shadow-lg">
-                                {{ add $index 1 }}
-                            </span>
-                        </div>
-                    </div>
-                    {{ end }}
+
 
                     <div class="col-md-9">
                         <div class="card">
                             <div class="card-body">
-                                <div class="float-end">
-                                    <small>{{ .date }}</small>
-                                </div>
-                                <h5 class="card-title">{{ .title }}</h5>
-                                
-                                {{ if .school.url }}
-                                <a href="{{ .school.url }}" target="_blank">
-                                    <h6>
-                                    {{ .school.name }}
-                                    </h6>
-                                </a>
-                                {{ else }}
-                                {{ .school.name }}
-                                {{ end }}
 
-                                {{ if .GPA }}
-                                <div class="py-1">
-                                    GPA:
-                                    <i>
-                                        <small>{{ .GPA }}</small>
-                                    </i> 
-                                </div>
-                                {{ end }}
+                                <h5 class="card-title">{{ .Title }}</h5>
+                                
+                                <!-- <pre> </pre> выключает markdown -->
                                 <div class="py-1 short-content">
-                                    {{ .content | markdownify}}
+                                    {{ .Content | truncate 700 | safeHTML }}
+                                     <!-- .Summary | truncate 700 | safeHTML  -->
+                                    <!-- {{ .Summary }} берет только часть текста -->
                                 </div>
-                                <!-- or (.Site.Params.feedback.email)  (.Site.Params.feedback.btnLink) -->
-                                {{ if or (.featuredLink.enable) (.featuredLink2.enable) (.featuredLink3.enable) }}
+                                <!-- Ссылки -->
                                 <div class="py-1">
-                                    {{ if .featuredLink.enable }}
-                                    <a href="{{ .featuredLink.url }}" class="btn" target="{{ .featuredLink.target }}">
-                                        {{ .featuredLink.name}}
+                                    <a href="{{ .RelPermalink }}" class="btn" target="_self">
+                                        Читать подробнее
                                     </a>
-                                    {{ end }}
-                                    {{ if .featuredLink2.enable }}
-                                        <a href="{{ .featuredLink2.url }}" class="btn" target="{{ .featuredLink2.target }}">
-                                            {{ .featuredLink2.name}}
-                                        </a>
-                                    {{ end }}
-                                    {{ if .featuredLink3.enable }}
-                                        <a href="{{ .featuredLink3.url }}" class="btn" target="{{ .featuredLink3.target }}">
-                                            {{ .featuredLink3.name}}
-                                        </a>
-                                    {{ end }}
                                 </div>
-                                {{ end }}
                                 
                             </div>
                         </div>
@@ -73,6 +37,7 @@
                 </div>
             </div>
             {{ end }}
+
             {{ if .Site.Params.short.endlink }}
                 <div style="display: flex; justify-content: center; text-align: center;">
                     <div id="feedback">

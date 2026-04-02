@@ -3,7 +3,9 @@
 Установить Hugo -> https://github.com/gohugoio/hugo/releases/tag/v0.159.2
 Прописать hugo в PATH
 
-Запуск: hugo server
+Запуск:
+    hugo server
+    hugo server --disableFastRender
 
 Более подробно здесь:
 https://gohugo.io/getting-started/quick-start/

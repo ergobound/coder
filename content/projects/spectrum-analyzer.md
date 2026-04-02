@@ -14,9 +14,8 @@ gallery:
         - src: /images/projects/spectrum-analyzer/c.png
         - src: /images/projects/spectrum-analyzer/d.png
     # buttons: "10px"
-    vert: false
-    standard: true
-    # width: 
+    vert: false # выключение вертикального отображения
+    standard: true # включение горизонтального отображения (так уж странно работает)
     # Только для vert:
     # slidewidth: 50%
     # maxwidth: 640px
@@ -59,4 +58,4 @@ gallery:
  - Каждый бар можно отдельно включить/выключить
 
 
-*Для запуска и использовании программы необходимо приобрести лицензионный USB-накопитель.*
+*Для запуска и использования программы необходимо приобрести лицензионный USB-накопитель.*

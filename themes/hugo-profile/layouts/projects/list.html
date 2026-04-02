@@ -12,7 +12,8 @@
 
 {{ define "main" }}
 <div class="container pt-5" id="projects">
-    <h2 class="text-center pb-2">{{.Title}}</h2>
+    <!-- Здесь .Title это "Projects", что не могу сказать о следующих .Title -->
+    <h2 class="text-center pb-2">{{.Title}}</h2> 
     <div class="row">
         {{ range .Paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
@@ -63,8 +64,14 @@
                 {{template "_internal/pagination.html" . }}
             </div>
         </div>
+
+        
+        
+
     </div>
+    
 </div>
+<div>{{- partial "sections/feedback.html" . -}}</div>
 <script>
     var newURL = "{{ .Site.BaseURL }}projects";
     document.querySelector('[aria-label="short"]').href = newURL;

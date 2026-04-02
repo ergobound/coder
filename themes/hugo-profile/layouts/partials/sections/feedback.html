@@ -1,52 +1,38 @@
 {{ if .Site.Params.feedback.enable | default false }}
 <section id="feedback" class="py-5">
     <div class="container">
+        <style>
+        #feedback {
+            padding-top: 1.5rem !important;
+            padding-bottom: 0rem !important;
+            /* padding-bottom: calc(1rem * 0.8) !important; */
+        }
+        #feedback h3 {
+            color: var(--text-secondary-color) !important;
+            width: 30%;
+            border-top: 2px solid #32a1ce;
+            border-radius: 100%;
+            margin: 0 auto;
+            display: block;
+            /* margin-left: 50%; */
+            /* padding-left: 70%; */
+            /* padding-right: 70%; */
+
+            /* position: block; */
+            /* text-align: center !important; */
+            /* margin-left: center;
+            */
+        }
+        </style>
         <h3 class="text-center"></h3>
-        <!-- <h3 class="text-center" style="width: 100%; border-top: 3px solid #32a1ce; text-align: center !important;">отзывы</h3> -->
-        <!-- <div style="width: 20%; text-align: center !important; border-top: 3px solid #32a1ce; padding: 0 center 0 center"></div> -->
-            <!-- <a style="width: 100px; border-top: 3px solid #32a1ce;"></a> -->
-        <!-- </div> -->
-        <!-- width: 20%;
-        /* text-align: center !important; */
-        /* margin-left: center;
-         */
-    
-        border-top: 1.5px solid #32a1ce; -->
+
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-md-5">
                 <div class="col-md-8 py-3">
                     <div class="text-center">
                         {{ .Site.Params.feedback.content | emojify | markdownify }}
                     </div>
-                    {{ if .Site.Params.feedback.formspree.enable | default false }}
-                    <div class="row justify-content-center">
-                        <form id="feedback-form" action="https://formspree.io/f/{{ .Site.Params.feedback.formspree.formId }}" onsubmit="handleFormspreeSubmit(event)" method="POST" class="col-md-7">
-                            <div class="form-group pt-3">
-                                <input type="email" class="form-control"  name="email" required="true" placeholder='{{ .Site.Params.feedback.formspree.emailCaption | emojify | default "Enter your email" }}'>
-                            </div>
-                            <div class="form-group pt-3">
-                                <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.feedback.formspree.messageCaption | emojify | default "Enter your message" }}' rows="{{ .Site.Params.feedback.formspree.messageRows | default 3 }}"></textarea>
-                            </div>
-                            <div class="form-group text-center pt-3">
-                                <button type="submit" class="btn">{{ .Site.Params.feedback.btnName | default "Get in Touch" }}</button>
-                            </div>
-                        </form>
-                    </div>
-                    {{ else if or (.Site.Params.feedback.email)  (.Site.Params.feedback.btnLink) }}
-                    <div class="text-center pt-3">
-                        <a 
-                            href='{{ if .Site.Params.feedback.btnLink }}
-                                    {{ .Site.Params.feedback.btnLink | default "#" }}
-                                  {{ else }}
-                                    mailto:{{ .Site.Params.feedback.email }}
-                                  {{ end }}'
-                            target="_blank"
-                            class="btn"
-                        >
-                            {{ .Site.Params.feedback.btnName | default "Get in Touch" }}
-                        </a>
-                    </div>
-                    {{ end }}
+                    
                 </div>
             </div>
         </div>
