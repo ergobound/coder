@@ -70,6 +70,11 @@
         <div class="pr-lg-4">
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
+              {{ if .Params.imageenable }}
+                <div class="featured-image">
+                  <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
+                </div>
+              {{ end }}
               {{ if .Params.gallery.enable | default false}}
                 <div class="start-gallery" style="padding-bottom:16px;">
                   <div class="f-carousel" id="myCarousel">
@@ -145,11 +150,7 @@
               {{ end }}
             </div>
           </div>
-          {{ if .Params.imageenable }}
-          <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
-          </div>
-          {{ end }}
+
           
 
 
