@@ -15,11 +15,11 @@ imageenable: true
 #         - src: https://your-teach.github.io/main/img/mobile/2.png
 #         - src: https://your-teach.github.io/main/img/1.png 
 #    standard: true
-# featuredLink:
-#     enable: true
-#     name: "Ссылка"
-#     target: "_blank"
-#     url: ""
+featuredLink:
+    enable: true
+    name: "Открыть бот"
+    target: "_blank"
+    url: "http://t.me/yourteach_bot"
 ---
  
 Приватный телеграм бот для преподавателей-фрилансеров. С помощью него можно легко подтверждать оплату и следить за занятиями. Вход в телеграм бот осуществляется по сгенерированному коду, который можно получить от преподавателя, после того как он создаст карточку ученика.
