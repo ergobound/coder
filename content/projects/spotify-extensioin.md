@@ -1,6 +1,6 @@
 ---
 title: "Chrome-расширение для Spotify"
-date: 2025-05-20
+date: 2025-06-20
 draft: false
 description: ""
 cardtext: true
