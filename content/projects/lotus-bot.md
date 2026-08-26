@@ -11,11 +11,11 @@ featuredLink:
     name: "Схема проекта"
     target: "_blank"
     url: "https://www.figma.com/board/P5OAyUyJLOCRPsXTjzJoGT/Block-Map?node-id=2-169&t=yDykRp7OvqJLn3X8-1"
-featuredLink2:
-    enable: true
-    name: "Открыть бот"
-    target: "_blank"
-    url: "https://t.me/LotusSellersBot"
+# featuredLink2:
+#     enable: true
+#     name: "Открыть бот"
+#     target: "_blank"
+#     url: "https://t.me/LotusSellersBot"
 ---
 
 
